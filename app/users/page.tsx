@@ -16,19 +16,31 @@ const UsersPage = async () => {
 
   return (
     <>
-      <h1>Users</h1>
-      <p>{new Date().toLocaleString()}</p>
-      <ul className="space-y-5 ">
-        {users.map(
-          (user) => (
-            <li key={user.id} >
-              <a href={`/users/${user.id}`}>
-                Name: {user.name}<br></br> Email: {user.email}
-              </a>
-            </li>
-          )
-        )}
-      </ul>
+      <h1 className="text-center mt-6 text-2xl font-extrabold ">Users</h1>
+      <table className="table outline outline-gray-200 my-3">
+        <thead>
+          <tr className="text-lg text-gray-500">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id} className="hover:bg-neutral-200  ">
+              <td>
+                {user.id}
+              </td>
+              <td>
+                <a href={`/users/${user.id}`}>
+                  {user.name}
+                </a>
+              </td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };
