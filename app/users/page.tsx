@@ -17,7 +17,7 @@ const UsersPage = async () => {
   return (
     <>
       <h1 className="text-center mt-6 text-2xl font-extrabold ">Users</h1>
-      <table className="table outline outline-gray-200 my-3">
+      <table className="table outline outline-gray-200 my-3 max-w-6xl mx-auto">
         <thead>
           <tr className="text-lg text-gray-500">
             <th>ID</th>
